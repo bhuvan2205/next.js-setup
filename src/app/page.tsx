@@ -1,5 +1,3 @@
-'use client';
-
 import Carousel from '@/core/molecules/Corousel';
 import Hero from '@/core/molecules/Hero';
 

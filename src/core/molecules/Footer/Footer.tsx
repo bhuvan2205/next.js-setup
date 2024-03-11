@@ -5,10 +5,12 @@ const Footer = (props: FooterProps) => {
   const { links } = props || {};
   return (
     <>
-      <footer className="bg-gray-800 text-gray-50 px-4">
+      <footer className=" text-gray-50 px-4">
         <div className="flex flex-col mx-auto  lg:flex-row divide-gray-400">
           <ul className="self-center py-6 space-y-4 text-center sm:flex sm:space-y-0 sm:justify-around sm:space-x-4 lg:flex-1 lg:justify-start">
-            {links?.map((link, index) => <li key={`footer-link-${index}`}>{link?.name}</li>)}
+            {links?.map((link, index) => (
+              <li key={`footer-link-${index}`}>{link?.name}</li>
+            ))}
           </ul>
           <div className="flex flex-col justify-center pt-6 lg:pt-0">
             <div className="flex justify-center space-x-4">

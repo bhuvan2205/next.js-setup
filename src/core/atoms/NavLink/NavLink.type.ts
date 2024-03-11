@@ -1,3 +1,6 @@
+import { ReactNode } from "react";
+
 export type NavLinkProps = {
-  text: string;
+  text: string | ReactNode;
+  onClick?: () => void;
 };

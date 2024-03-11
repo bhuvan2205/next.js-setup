@@ -7,17 +7,17 @@ const links = [
     href: '/',
   },
   {
-    id: 1,
+    id: 2,
     name: 'About',
     href: '/about',
   },
   {
-    id: 1,
+    id: 3,
     name: 'Products',
     href: '/products',
   },
   {
-    id: 1,
+    id: 4,
     name: 'Contact',
     href: '/contact',
   },

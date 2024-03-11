@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
 import { loginSchema } from './loginSchema';
+import { pb } from '@/config/pocketbase';
 
 type FormData = z.infer<typeof loginSchema>;
 
@@ -18,17 +19,11 @@ export default function Login() {
     resolver: zodResolver(loginSchema),
   });
 
-  console.log(errors);
-
   async function onSubmit(data: FormData) {
-    console.log({ data });
-    // Replace this with a server action or fetch an API endpoint to authenticate
-    await new Promise<void>((resolve) => {
-      setTimeout(() => {
-        resolve();
-      }, 2000); // 2 seconds in milliseconds
-    });
-    router.push('/');
+    const { email, password } = data || {};
+    const authData = await pb.collection('users').authWithPassword(email, password);
+    console.log('🚀 ~ onSubmit ~ authData:', authData);
+    router.push('/profile');
   }
 
   return (
@@ -68,6 +63,7 @@ export default function Login() {
           <button
             type="submit"
             className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400"
+            disabled={!isDirty || !isValid || isSubmitting}
           >
             Sign in
           </button>

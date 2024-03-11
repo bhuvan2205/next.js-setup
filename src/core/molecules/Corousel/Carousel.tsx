@@ -5,7 +5,7 @@ import React from 'react';
 
 const Carousel = () => {
   return (
-    <div className="relative flex items-center justify-center w-full text-gray-50">
+    <div className="relative flex items-center justify-center w-full text-gray-50 bg-white">
       <button
         aria-label="Slide back"
         type="button"
