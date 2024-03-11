@@ -5,13 +5,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+./pocketbase serve
+```
+
+![image](https://github.com/bhuvan2205/next.js-setup/assets/56767330/d409c731-7611-487d-932f-1dc279248a78)
+
+Open http://127.0.0.1:8090/_/ with your browser to add the Admin Credentails
+
+To run client server,
+
+```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
