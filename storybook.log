@@ -1,0 +1,63 @@
+npm ERR! code 1
+npm ERR! path /home/rahul/Dev/Next_JS/my-app/node_modules/sharp
+npm ERR! command failed
+npm ERR! command sh -c (node install/libvips && node install/dll-copy && prebuild-install) || (node install/can-compile && node-gyp rebuild && node install/dll-copy)
+npm ERR! sharp: Using cached /home/rahul/.npm/_libvips/libvips-8.14.5-linux-x64.tar.br
+npm ERR! sharp: Integrity check passed for linux-x64
+npm ERR! 
+npm ERR! make: Entering directory '/home/rahul/Dev/Next_JS/my-app/node_modules/sharp/build'
+npm ERR!   CC(target) Release/obj.target/nothing/../node-addon-api/nothing.o
+npm ERR! rm -f Release/obj.target/../node-addon-api/nothing.a Release/obj.target/../node-addon-api/nothing.a.ar-file-list; mkdir -p `dirname Release/obj.target/../node-addon-api/nothing.a`
+npm ERR! ar crs Release/obj.target/../node-addon-api/nothing.a @Release/obj.target/../node-addon-api/nothing.a.ar-file-list
+npm ERR!   COPY Release/nothing.a
+npm ERR!   TOUCH Release/obj.target/libvips-cpp.stamp
+npm ERR!   CXX(target) Release/obj.target/sharp-linux-x64/src/common.o
+npm ERR! make: Leaving directory '/home/rahul/Dev/Next_JS/my-app/node_modules/sharp/build'
+npm ERR! prebuild-install warn install Request timed out
+npm ERR! gyp info it worked if it ends with ok
+npm ERR! gyp info using node-gyp@10.0.1
+npm ERR! gyp info using node@20.11.0 | linux | x64
+npm ERR! gyp info find Python using Python version 3.10.12 found at "/usr/bin/python3"
+npm ERR! gyp info spawn /usr/bin/python3
+npm ERR! gyp info spawn args [
+npm ERR! gyp info spawn args '/home/rahul/.nvm/versions/node/v20.11.0/lib/node_modules/npm/node_modules/node-gyp/gyp/gyp_main.py',
+npm ERR! gyp info spawn args 'binding.gyp',
+npm ERR! gyp info spawn args '-f',
+npm ERR! gyp info spawn args 'make',
+npm ERR! gyp info spawn args '-I',
+npm ERR! gyp info spawn args '/home/rahul/Dev/Next_JS/my-app/node_modules/sharp/build/config.gypi',
+npm ERR! gyp info spawn args '-I',
+npm ERR! gyp info spawn args '/home/rahul/.nvm/versions/node/v20.11.0/lib/node_modules/npm/node_modules/node-gyp/addon.gypi',
+npm ERR! gyp info spawn args '-I',
+npm ERR! gyp info spawn args '/home/rahul/.cache/node-gyp/20.11.0/include/node/common.gypi',
+npm ERR! gyp info spawn args '-Dlibrary=shared_library',
+npm ERR! gyp info spawn args '-Dvisibility=default',
+npm ERR! gyp info spawn args '-Dnode_root_dir=/home/rahul/.cache/node-gyp/20.11.0',
+npm ERR! gyp info spawn args '-Dnode_gyp_dir=/home/rahul/.nvm/versions/node/v20.11.0/lib/node_modules/npm/node_modules/node-gyp',
+npm ERR! gyp info spawn args '-Dnode_lib_file=/home/rahul/.cache/node-gyp/20.11.0/<(target_arch)/node.lib',
+npm ERR! gyp info spawn args '-Dmodule_root_dir=/home/rahul/Dev/Next_JS/my-app/node_modules/sharp',
+npm ERR! gyp info spawn args '-Dnode_engine=v8',
+npm ERR! gyp info spawn args '--depth=.',
+npm ERR! gyp info spawn args '--no-parallel',
+npm ERR! gyp info spawn args '--generator-output',
+npm ERR! gyp info spawn args 'build',
+npm ERR! gyp info spawn args '-Goutput_dir=.'
+npm ERR! gyp info spawn args ]
+npm ERR! gyp info spawn make
+npm ERR! gyp info spawn args [ 'BUILDTYPE=Release', '-C', 'build' ]
+npm ERR! ../src/common.cc:13:10: fatal error: vips/vips8: No such file or directory
+npm ERR!    13 | #include <vips/vips8>
+npm ERR!       |          ^~~~~~~~~~~~
+npm ERR! compilation terminated.
+npm ERR! make: *** [sharp-linux-x64.target.mk:138: Release/obj.target/sharp-linux-x64/src/common.o] Error 1
+npm ERR! gyp ERR! build error 
+npm ERR! gyp ERR! stack Error: `make` failed with exit code: 2
+npm ERR! gyp ERR! stack at ChildProcess.<anonymous> (/home/rahul/.nvm/versions/node/v20.11.0/lib/node_modules/npm/node_modules/node-gyp/lib/build.js:209:23)
+npm ERR! gyp ERR! System Linux 6.5.0-25-generic
+npm ERR! gyp ERR! command "/home/rahul/.nvm/versions/node/v20.11.0/bin/node" "/home/rahul/.nvm/versions/node/v20.11.0/lib/node_modules/npm/node_modules/node-gyp/bin/node-gyp.js" "rebuild"
+npm ERR! gyp ERR! cwd /home/rahul/Dev/Next_JS/my-app/node_modules/sharp
+npm ERR! gyp ERR! node -v v20.11.0
+npm ERR! gyp ERR! node-gyp -v v10.0.1
+npm ERR! gyp ERR! not ok
+
+npm ERR! A complete log of this run can be found in: /home/rahul/.npm/_logs/2024-03-11T02_47_43_061Z-debug-0.log
