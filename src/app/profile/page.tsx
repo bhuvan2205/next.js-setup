@@ -1,8 +1,9 @@
 'use client';
 
 import { pb } from '@/config/pocketbase';
+import Profile from '@/core/molecules/Profile/Profile';
 import { useRouter } from 'next/navigation';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 
 const page = () => {
   const router = useRouter();
@@ -12,12 +13,10 @@ const page = () => {
       router.push('/login');
     }
   }, [pb.authStore.isValid]);
+
   return (
-    <div className="p-32 bg-white min-h-[500px]">
-      <div>
-        <strong>User Id: </strong>
-        {pb?.authStore?.model?.id ?? ''}
-      </div>
+    <div className="bg-white min-h-[800px] flex items-center justify-center">
+      <Profile />
     </div>
   );
 };
